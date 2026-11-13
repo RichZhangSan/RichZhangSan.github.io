@@ -62,6 +62,15 @@
       .highlight-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: auto; }
       .highlight-links a { color: var(--accent); font-size: 12px; font-weight: 650; text-decoration: none; }
       .highlight-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+      .speaking { margin-bottom: 48px; }
+      .speaking-feature, .speaking-card { overflow: hidden; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
+      .speaking-feature img { display: block; width: 100%; aspect-ratio: 16 / 8.5; object-fit: cover; }
+      .speaking-feature figcaption, .speaking-card figcaption { padding: 14px 16px 16px; }
+      .speaking-title { margin: 0; color: var(--ink); font-size: 13px; font-weight: 700; }
+      .speaking-description { margin: 5px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+      .speaking-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; margin-top: 13px; }
+      .speaking-card { margin: 0; }
+      .speaking-card img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
       .experience { margin-bottom: 44px; }
       .experience details { border: 1px solid var(--line); border-radius: 12px; background: rgb(255 255 255 / 70%); }
       .experience summary { padding: 16px 20px; color: #344155; cursor: pointer; font-size: 13px; font-weight: 700; }
@@ -93,6 +102,8 @@
         .bio { font-size: 14px; }
         .highlight-grid { grid-template-columns: 1fr; gap: 10px; }
         .highlight-card { min-height: 0; }
+        .speaking-grid { grid-template-columns: 1fr; gap: 10px; }
+        .speaking-feature img { aspect-ratio: 4 / 3; }
         .experience-item { grid-template-columns: 1fr; gap: 7px; padding: 16px; }
         .experience-years { font-size: 11px; }
         .projects { grid-template-columns: 1fr; gap: 10px; }
@@ -159,6 +170,42 @@
               <p class="highlight-detail">Building a full-stack overseas API service and bringing it to market, while evolving search, geocoding, navigation, and routing products for enterprise partners.</p>
               <span class="tag">B2B commercialization</span>
             </article>
+          </div>
+        </section>
+        <section class="speaking" aria-labelledby="speaking-heading">
+          <div class="section-heading">
+            <h2 id="speaking-heading">On stage</h2>
+            <span class="section-note">Ideas shared in the real world</span>
+          </div>
+          <figure class="speaking-feature">
+            <img src="assets/speaking/agent-plan-talk.jpeg" alt="Zhang Chaoyuan presenting Baidu Maps Agent Plan at the 2026 Global Developer Pioneer Summit" width="960" height="587" fetchpriority="high">
+            <figcaption>
+              <p class="speaking-title">Map Agent Plan · GDPS 2026</p>
+              <p class="speaking-description">Helping AI agents navigate and act in the physical world.</p>
+            </figcaption>
+          </figure>
+          <div class="speaking-grid">
+            <figure class="speaking-card">
+              <img src="assets/speaking/baidu-world-talk.jpeg" alt="Zhang Chaoyuan speaking at Baidu World 2025" width="1080" height="720" loading="lazy">
+              <figcaption>
+                <p class="speaking-title">Baidu World 2025</p>
+                <p class="speaking-description">AI in action · Bringing map platform capabilities to developers.</p>
+              </figcaption>
+            </figure>
+            <figure class="speaking-card">
+              <img src="assets/speaking/motorcycle-expo-talk.png" alt="Zhang Chaoyuan presenting Baidu Maps two-wheel navigation at the China International Motorcycle Trade Exhibition" width="960" height="640" loading="lazy">
+              <figcaption>
+                <p class="speaking-title">Two-wheel mobility</p>
+                <p class="speaking-description">Sharing lane-level navigation and connected riding experiences.</p>
+              </figcaption>
+            </figure>
+            <figure class="speaking-card">
+              <img src="assets/speaking/ai-innovation-talk.jpeg" alt="Zhang Chaoyuan speaking about AI-native map platform tools at an AI innovation event" width="960" height="640" loading="lazy">
+              <figcaption>
+                <p class="speaking-title">AI for map developers</p>
+                <p class="speaking-description">From docs and Skills to Agents—making map development easier.</p>
+              </figcaption>
+            </figure>
           </div>
         </section>
         <section class="experience" aria-labelledby="experience-heading">
