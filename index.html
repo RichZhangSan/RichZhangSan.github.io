@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fa">
+    <meta name="description" content="Zhang Chaoyuan — PM at Baidu Maps Open Platform. Product, maps, and things built for the web.">
+    <title>Zhang Chaoyuan — Product &amp; Maps</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17212f;
+        --muted: #657185;
+        --line: #e3e8ef;
+        --surface: #fff;
+        --accent: #2867e8;
+        --accent-soft: #edf3ff;
+        --page: #f5f7fa;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        min-width: 320px;
+        margin: 0;
+        background: radial-gradient(ellipse at 92% 4%, rgb(40 103 232 / 8%), transparent 29rem), var(--page);
+        color: var(--ink);
+      }
+      a { color: inherit; }
+      a:focus-visible { outline: 3px solid #82a9ff; outline-offset: 4px; border-radius: 4px; }
+      .page-shell { width: min(100% - 40px, 920px); margin: 0 auto; }
+      .topbar { display: flex; align-items: center; justify-content: space-between; min-height: 78px; border-bottom: 1px solid var(--line); }
+      .wordmark { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; letter-spacing: -.025em; text-decoration: none; }
+      .mark { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid #d5e1fb; border-radius: 9px; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 800; }
+      .top-link { color: var(--muted); font-size: 13px; text-decoration: none; }
+      .top-link:hover, .project-link:hover { color: var(--accent); }
+      main { padding: 66px 0 76px; }
+      .intro { display: grid; grid-template-columns: 1fr 132px; align-items: center; gap: 42px; padding: 0 0 52px; }
+      .eyebrow { margin: 0 0 15px; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      h1 { margin: 0; font-size: clamp(36px, 6vw, 58px); font-weight: 720; letter-spacing: -.065em; line-height: 1.05; }
+      .role { margin: 16px 0 0; color: #3e4b5e; font-size: clamp(16px, 2vw, 19px); letter-spacing: -.02em; }
+      .bio { max-width: 560px; margin: 16px 0 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
+      .avatar { display: block; width: 132px; height: 132px; border: 5px solid var(--surface); border-radius: 30px; box-shadow: 0 12px 32px rgb(22 39 68 / 12%); object-fit: cover; }
+      .social-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+      .button { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; gap: 8px; padding: 0 14px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: #344155; font-size: 13px; font-weight: 650; text-decoration: none; transition: border-color .16s ease, transform .16s ease; }
+      .button:hover { border-color: #b9c9e8; transform: translateY(-1px); }
+      .button-primary { border-color: var(--accent); background: var(--accent); color: #fff; }
+      .button-primary:hover { border-color: #1d55c9; color: #fff; }
+      .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+      h2 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -.025em; }
+      .section-note { color: var(--muted); font-size: 12px; }
+      .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+      .project-card { display: flex; min-height: 154px; flex-direction: column; align-items: flex-start; padding: 20px; border: 1px solid var(--line); border-radius: 13px; background: rgb(255 255 255 / 84%); text-decoration: none; transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
+      .project-card:hover { transform: translateY(-2px); border-color: #c9d8f4; box-shadow: 0 10px 24px rgb(31 56 94 / 7%); }
+      .project-topline { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 12px; }
+      .project-name { font-size: 14px; font-weight: 700; letter-spacing: -.02em; }
+      .arrow { color: #8a96a8; font-size: 15px; }
+      .project-description { margin: 12px 0 16px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+      .tag { margin-top: auto; padding: 5px 8px; border-radius: 6px; background: #f0f3f8; color: #5b687a; font-size: 11px; font-weight: 600; }
+      footer { display: flex; justify-content: space-between; gap: 16px; padding: 20px 0 30px; border-top: 1px solid var(--line); color: #7a8698; font-size: 12px; }
+      .project-link { color: #536176; text-decoration: none; }
+      @media (max-width: 620px) {
+        .page-shell { width: min(100% - 32px, 500px); }
+        .topbar { min-height: 66px; }
+        main { padding: 46px 0 54px; }
+        .intro { grid-template-columns: 1fr 82px; gap: 18px; padding-bottom: 40px; }
+        .avatar { width: 82px; height: 82px; border-width: 4px; border-radius: 22px; }
+        .bio { font-size: 14px; }
+        .projects { grid-template-columns: 1fr; gap: 10px; }
+        .project-card { min-height: 140px; }
+      }
+      @media (max-width: 390px) {
+        .intro { grid-template-columns: 1fr 66px; gap: 12px; }
+        .avatar { width: 66px; height: 66px; border-radius: 18px; }
+        .social-links { gap: 8px; }
+        .button { padding: 0 11px; }
+        footer { flex-direction: column; gap: 8px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="Zhang Chaoyuan, home">
+          <span class="mark" aria-hidden="true">ZC</span>
+          <span>zhangchaoyuan</span>
+        </a>
+        <a class="top-link" href="https://github.com/RichZhangSan" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+      </header>
+      <main>
+        <section class="intro" aria-labelledby="name">
+          <div>
+            <p class="eyebrow">Product · Maps · Web</p>
+            <h1 id="name">Zhang Chaoyuan</h1>
+            <p class="role">PM · Baidu Maps Open Platform</p>
+            <p class="bio">I work at the intersection of product and technology, turning ideas into useful tools and experiences for the web.</p>
+            <div class="social-links">
+              <a class="button button-primary" href="https://github.com/RichZhangSan" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+              <a class="button" href="#projects">Explore projects <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <img class="avatar" src="https://avatars.githubusercontent.com/u/204153626?v=4" alt="Zhang Chaoyuan's GitHub avatar" width="132" height="132">
+        </section>
+        <section id="projects" aria-labelledby="projects-heading">
+          <div class="section-heading">
+            <h2 id="projects-heading">Selected projects</h2>
+            <span class="section-note">A few things I've been building</span>
+          </div>
+          <div class="projects">
+            <a class="project-card" href="https://github.com/RichZhangSan/photo-editorial-studio" target="_blank" rel="noopener noreferrer">
+              <span class="project-topline"><span class="project-name">Photo Editorial Studio</span><span class="arrow" aria-hidden="true">↗</span></span>
+              <span class="project-description">A local-first studio for crafting editorial photo posters.</span>
+              <span class="tag">Creative tools</span>
+            </a>
+            <a class="project-card" href="https://github.com/RichZhangSan/pixel-collage-lite" target="_blank" rel="noopener noreferrer">
+              <span class="project-topline"><span class="project-name">Pixel Collage Lite</span><span class="arrow" aria-hidden="true">↗</span></span>
+              <span class="project-description">An AI-assisted browser collage maker with SAM 2 segmentation.</span>
+              <span class="tag">AI · Browser</span>
+            </a>
+            <a class="project-card" href="https://github.com/RichZhangSan/beijing-pickleball-map" target="_blank" rel="noopener noreferrer">
+              <span class="project-topline"><span class="project-name">Beijing Pickleball Map</span><span class="arrow" aria-hidden="true">↗</span></span>
+              <span class="project-description">A map of pickleball venues across Beijing, built with Baidu Maps JSAPI 4.0.</span>
+              <span class="tag">Maps · JSAPI</span>
+            </a>
+            <a class="project-card" href="https://github.com/RichZhangSan/personal-style-analysis-skill" target="_blank" rel="noopener noreferrer">
+              <span class="project-topline"><span class="project-name">Personal Style Analysis</span><span class="arrow" aria-hidden="true">↗</span></span>
+              <span class="project-description">A Chinese-language agent skill for personal color and style analysis.</span>
+              <span class="tag">Agent skill</span>
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <span>© 2026 Zhang Chaoyuan</span>
+        <a class="project-link" href="https://github.com/RichZhangSan" target="_blank" rel="noopener noreferrer">@RichZhangSan</a>
+      </footer>
+    </div>
+  </body>
+</html>
