@@ -53,6 +53,15 @@
       .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
       h2 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -.025em; }
       .section-note { color: var(--muted); font-size: 12px; }
+      .experience { margin-bottom: 44px; }
+      .experience-list { display: grid; gap: 10px; }
+      .experience-item { display: grid; grid-template-columns: 102px 1fr; gap: 18px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: rgb(255 255 255 / 84%); }
+      .experience-years { padding-top: 2px; color: var(--accent); font-size: 12px; font-weight: 700; }
+      .experience-title { margin: 0; font-size: 14px; font-weight: 700; letter-spacing: -.015em; }
+      .experience-role { margin: 4px 0 0; color: #536176; font-size: 12px; font-weight: 600; }
+      .experience-detail { margin: 9px 0 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+      .education { margin-top: 14px; padding: 14px 18px; border-left: 2px solid #c9d8f4; color: var(--muted); font-size: 12px; line-height: 1.7; }
+      .education strong { color: #3e4b5e; }
       .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
       .project-card { display: flex; min-height: 154px; flex-direction: column; align-items: flex-start; padding: 20px; border: 1px solid var(--line); border-radius: 13px; background: rgb(255 255 255 / 84%); text-decoration: none; transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease; }
       .project-card:hover { transform: translateY(-2px); border-color: #c9d8f4; box-shadow: 0 10px 24px rgb(31 56 94 / 7%); }
@@ -70,6 +79,8 @@
         .intro { grid-template-columns: 1fr 82px; gap: 18px; padding-bottom: 40px; }
         .avatar { width: 82px; height: 82px; border-width: 4px; border-radius: 22px; }
         .bio { font-size: 14px; }
+        .experience-item { grid-template-columns: 1fr; gap: 7px; padding: 16px; }
+        .experience-years { font-size: 11px; }
         .projects { grid-template-columns: 1fr; gap: 10px; }
         .project-card { min-height: 140px; }
       }
@@ -100,13 +111,62 @@
             <p class="eyebrow">Product · Maps · Web</p>
             <h1 id="name">Zhang Chaoyuan</h1>
             <p class="role">PM · Baidu Maps Open Platform</p>
-            <p class="bio">I work at the intersection of product and technology, turning ideas into useful tools and experiences for the web.</p>
+            <p class="bio">I build map platform products that connect AI, real-world navigation, and global services—from data foundations to scalable business growth.</p>
             <div class="social-links">
               <a class="button button-primary" href="https://github.com/RichZhangSan" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
               <a class="button" href="#projects">Explore projects <span aria-hidden="true">↓</span></a>
             </div>
           </div>
           <img class="avatar" src="https://avatars.githubusercontent.com/u/204153626?v=4" alt="Zhang Chaoyuan's GitHub avatar" width="132" height="132">
+        </section>
+        <section class="experience" aria-labelledby="experience-heading">
+          <div class="section-heading">
+            <h2 id="experience-heading">Experience &amp; impact</h2>
+            <span class="section-note">Maps · AI · Product</span>
+          </div>
+          <div class="experience-list">
+            <article class="experience-item">
+              <span class="experience-years">2025 — Present</span>
+              <div>
+                <h3 class="experience-title">Baidu Maps · Open Platform</h3>
+                <p class="experience-role">Product Architect · AI-native platform</p>
+                <p class="experience-detail">Leading the platform's AI upgrade, including MCP and Skills capabilities and Map Agent Plan. Also building overseas API services and scaling B2B commercialization.</p>
+              </div>
+            </article>
+            <article class="experience-item">
+              <span class="experience-years">2023 — 2024</span>
+              <div>
+                <h3 class="experience-title">Baidu Maps · Merchant Services</h3>
+                <p class="experience-role">Product Lead</p>
+                <p class="experience-detail">Built merchant tools for store presence and map-based customer acquisition. Led the team to double annual revenue and exceed RMB 100 million.</p>
+              </div>
+            </article>
+            <article class="experience-item">
+              <span class="experience-years">2019 — 2023</span>
+              <div>
+                <h3 class="experience-title">Baidu Maps · Content &amp; Data</h3>
+                <p class="experience-role">POI Data Product Lead</p>
+                <p class="experience-detail">Led product, data strategy, and production-platform teams to improve POI quality, processing capacity, and operational efficiency.</p>
+              </div>
+            </article>
+            <article class="experience-item">
+              <span class="experience-years">2018 — 2019</span>
+              <div>
+                <h3 class="experience-title">DiDi Chuxing</h3>
+                <p class="experience-role">Product Expert</p>
+                <p class="experience-detail">Led POI quality and data-ecosystem work for mobility, including real-world intelligence sources and POI-centered knowledge graphs.</p>
+              </div>
+            </article>
+            <article class="experience-item">
+              <span class="experience-years">2008 — 2018</span>
+              <div>
+                <h3 class="experience-title">NavInfo &amp; Baidu Maps</h3>
+                <p class="experience-role">Product Manager · Senior Product Manager</p>
+                <p class="experience-detail">Built in-car navigation map products at NavInfo, then led POI data experience and product capabilities at Baidu Maps.</p>
+              </div>
+            </article>
+          </div>
+          <p class="education"><strong>Education</strong> · B.Eng. in Computer Science, Beijing Jiaotong University · M.Eng. in Computer Science, Tsinghua University</p>
         </section>
         <section id="projects" aria-labelledby="projects-heading">
           <div class="section-heading">
