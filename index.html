@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f5f7fa">
-    <meta name="description" content="Zhang Chaoyuan — PM at Baidu Maps Open Platform. Product, maps, and things built for the web.">
-    <title>Zhang Chaoyuan — Product &amp; Maps</title>
+    <meta name="description" content="Zhang Chaoyuan builds spatial intelligence for AI agents and real-world mobility at Baidu Maps Open Platform.">
+    <title>Zhang Chaoyuan — Spatial Intelligence</title>
     <style>
       :root {
         color-scheme: light;
@@ -53,9 +53,21 @@
       .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
       h2 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -.025em; }
       .section-note { color: var(--muted); font-size: 12px; }
+      .highlights { margin-bottom: 48px; }
+      .highlight-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+      .highlight-card { display: flex; min-height: 238px; flex-direction: column; align-items: flex-start; padding: 20px; border: 1px solid var(--line); border-radius: 13px; background: rgb(255 255 255 / 84%); }
+      .highlight-kicker { margin: 0 0 15px; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+      .highlight-title { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: -.03em; line-height: 1.35; }
+      .highlight-detail { margin: 11px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+      .highlight-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: auto; }
+      .highlight-links a { color: var(--accent); font-size: 12px; font-weight: 650; text-decoration: none; }
+      .highlight-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
       .experience { margin-bottom: 44px; }
-      .experience-list { display: grid; gap: 10px; }
-      .experience-item { display: grid; grid-template-columns: 102px 1fr; gap: 18px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: rgb(255 255 255 / 84%); }
+      .experience details { border: 1px solid var(--line); border-radius: 12px; background: rgb(255 255 255 / 70%); }
+      .experience summary { padding: 16px 20px; color: #344155; cursor: pointer; font-size: 13px; font-weight: 700; }
+      .experience summary::marker { color: var(--accent); }
+      .experience-list { display: grid; gap: 10px; padding: 0 14px 14px; }
+      .experience-item { display: grid; grid-template-columns: 102px 1fr; gap: 18px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
       .experience-years { padding-top: 2px; color: var(--accent); font-size: 12px; font-weight: 700; }
       .experience-title { margin: 0; font-size: 14px; font-weight: 700; letter-spacing: -.015em; }
       .experience-role { margin: 4px 0 0; color: #536176; font-size: 12px; font-weight: 600; }
@@ -79,6 +91,8 @@
         .intro { grid-template-columns: 1fr 82px; gap: 18px; padding-bottom: 40px; }
         .avatar { width: 82px; height: 82px; border-width: 4px; border-radius: 22px; }
         .bio { font-size: 14px; }
+        .highlight-grid { grid-template-columns: 1fr; gap: 10px; }
+        .highlight-card { min-height: 0; }
         .experience-item { grid-template-columns: 1fr; gap: 7px; padding: 16px; }
         .experience-years { font-size: 11px; }
         .projects { grid-template-columns: 1fr; gap: 10px; }
@@ -108,65 +122,96 @@
       <main>
         <section class="intro" aria-labelledby="name">
           <div>
-            <p class="eyebrow">Product · Maps · Web</p>
+            <p class="eyebrow">Spatial intelligence · AI agents · Mobility</p>
             <h1 id="name">Zhang Chaoyuan</h1>
-            <p class="role">PM · Baidu Maps Open Platform</p>
-            <p class="bio">I build map platform products that connect AI, real-world navigation, and global services—from data foundations to scalable business growth.</p>
+            <p class="role">Building spatial intelligence for AI agents and real-world mobility</p>
+            <p class="bio">Product lead at Baidu Maps Open Platform, turning map data and services into capabilities that agents, developers, and mobility partners can use in the real world.</p>
             <div class="social-links">
               <a class="button button-primary" href="https://github.com/RichZhangSan" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
-              <a class="button" href="#projects">Explore projects <span aria-hidden="true">↓</span></a>
+              <a class="button" href="#recent-work">Recent work <span aria-hidden="true">↓</span></a>
             </div>
           </div>
           <img class="avatar" src="https://avatars.githubusercontent.com/u/204153626?v=4" alt="Zhang Chaoyuan's GitHub avatar" width="132" height="132">
         </section>
+        <section class="highlights" id="recent-work" aria-labelledby="highlights-heading">
+          <div class="section-heading">
+            <h2 id="highlights-heading">Recent work</h2>
+            <span class="section-note">Selected work from the past year</span>
+          </div>
+          <div class="highlight-grid">
+            <article class="highlight-card">
+              <p class="highlight-kicker">AI × Maps</p>
+              <h3 class="highlight-title">Making map capabilities agent-ready</h3>
+              <p class="highlight-detail">Leading an AI-native upgrade of the map platform—from Map Agent Plan and Skills to MCP and developer tools—so agents can search places, plan routes, and build with maps through natural language.</p>
+              <div class="highlight-links">
+                <a href="https://mp.weixin.qq.com/s/pw1ZozTKsduZKh-Utallkw?scene=1" target="_blank" rel="noopener noreferrer">MiniMax Code integration ↗</a>
+                <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTI2ODI3Mg==&amp;mid=2651203107&amp;idx=1&amp;sn=429232bd11ec92b8693f285ab57f0a67&amp;scene=21#wechat_redirect" target="_blank" rel="noopener noreferrer">Map Skills launch ↗</a>
+              </div>
+            </article>
+            <article class="highlight-card">
+              <p class="highlight-kicker">Mobility × Spatial AI</p>
+              <h3 class="highlight-title">Taking navigation beyond the phone</h3>
+              <p class="highlight-detail">Bringing map and AI experiences to two-wheelers and smart glasses: conversational riding assistance, lane-level navigation and projection, plus lightweight, glanceable wearable guidance.</p>
+            </article>
+            <article class="highlight-card">
+              <p class="highlight-kicker">Platform × Global</p>
+              <h3 class="highlight-title">Taking location services to global markets</h3>
+              <p class="highlight-detail">Building a full-stack overseas API service and bringing it to market, while evolving search, geocoding, navigation, and routing products for enterprise partners.</p>
+              <span class="tag">B2B commercialization</span>
+            </article>
+          </div>
+        </section>
         <section class="experience" aria-labelledby="experience-heading">
           <div class="section-heading">
-            <h2 id="experience-heading">Experience &amp; impact</h2>
-            <span class="section-note">Maps · AI · Product</span>
+            <h2 id="experience-heading">Background</h2>
+            <span class="section-note">A longer view</span>
           </div>
-          <div class="experience-list">
-            <article class="experience-item">
-              <span class="experience-years">2025 — Present</span>
-              <div>
-                <h3 class="experience-title">Baidu Maps · Open Platform</h3>
-                <p class="experience-role">Product Architect · AI-native platform</p>
-                <p class="experience-detail">Leading the platform's AI upgrade, including MCP and Skills capabilities and Map Agent Plan. Also building overseas API services and scaling B2B commercialization.</p>
-              </div>
-            </article>
-            <article class="experience-item">
-              <span class="experience-years">2023 — 2024</span>
-              <div>
-                <h3 class="experience-title">Baidu Maps · Merchant Services</h3>
-                <p class="experience-role">Product Lead</p>
-                <p class="experience-detail">Built merchant tools for store presence and map-based customer acquisition. Led the team to double annual revenue and exceed RMB 100 million.</p>
-              </div>
-            </article>
-            <article class="experience-item">
-              <span class="experience-years">2019 — 2023</span>
-              <div>
-                <h3 class="experience-title">Baidu Maps · Content &amp; Data</h3>
-                <p class="experience-role">POI Data Product Lead</p>
-                <p class="experience-detail">Led product, data strategy, and production-platform teams to improve POI quality, processing capacity, and operational efficiency.</p>
-              </div>
-            </article>
-            <article class="experience-item">
-              <span class="experience-years">2018 — 2019</span>
-              <div>
-                <h3 class="experience-title">DiDi Chuxing</h3>
-                <p class="experience-role">Product Expert</p>
-                <p class="experience-detail">Led POI quality and data-ecosystem work for mobility, including real-world intelligence sources and POI-centered knowledge graphs.</p>
-              </div>
-            </article>
-            <article class="experience-item">
-              <span class="experience-years">2008 — 2018</span>
-              <div>
-                <h3 class="experience-title">NavInfo &amp; Baidu Maps</h3>
-                <p class="experience-role">Product Manager · Senior Product Manager</p>
-                <p class="experience-detail">Built in-car navigation map products at NavInfo, then led POI data experience and product capabilities at Baidu Maps.</p>
-              </div>
-            </article>
-          </div>
-          <p class="education"><strong>Education</strong> · B.Eng. in Computer Science, Beijing Jiaotong University · M.Eng. in Computer Science, Tsinghua University</p>
+          <details>
+            <summary>Career &amp; education</summary>
+            <div class="experience-list">
+              <article class="experience-item">
+                <span class="experience-years">2025 — Present</span>
+                <div>
+                  <h3 class="experience-title">Baidu Maps · Open Platform</h3>
+                  <p class="experience-role">Product Architect · AI-native platform</p>
+                  <p class="experience-detail">Leading AI platform capabilities, overseas API services, and B2B commercialization.</p>
+                </div>
+              </article>
+              <article class="experience-item">
+                <span class="experience-years">2023 — 2024</span>
+                <div>
+                  <h3 class="experience-title">Baidu Maps · Merchant Services</h3>
+                  <p class="experience-role">Product Lead</p>
+                  <p class="experience-detail">Built merchant tools for store presence and map-based customer acquisition; led the team to double annual revenue and exceed RMB 100 million.</p>
+                </div>
+              </article>
+              <article class="experience-item">
+                <span class="experience-years">2019 — 2023</span>
+                <div>
+                  <h3 class="experience-title">Baidu Maps · Content &amp; Data</h3>
+                  <p class="experience-role">POI Data Product Lead</p>
+                  <p class="experience-detail">Led product, data strategy, and production-platform teams to improve POI quality and processing efficiency.</p>
+                </div>
+              </article>
+              <article class="experience-item">
+                <span class="experience-years">2018 — 2019</span>
+                <div>
+                  <h3 class="experience-title">DiDi Chuxing</h3>
+                  <p class="experience-role">Product Expert</p>
+                  <p class="experience-detail">Led POI quality and data-ecosystem work for mobility, including real-world intelligence sources and POI-centered knowledge graphs.</p>
+                </div>
+              </article>
+              <article class="experience-item">
+                <span class="experience-years">2008 — 2018</span>
+                <div>
+                  <h3 class="experience-title">NavInfo &amp; Baidu Maps</h3>
+                  <p class="experience-role">Product Manager · Senior Product Manager</p>
+                  <p class="experience-detail">Built in-car navigation map products at NavInfo, then led POI data experience and product capabilities at Baidu Maps.</p>
+                </div>
+              </article>
+              <p class="education"><strong>Education</strong> · B.Eng. in Computer Science, Beijing Jiaotong University · M.Eng. in Computer Science, Tsinghua University</p>
+            </div>
+          </details>
         </section>
         <section id="projects" aria-labelledby="projects-heading">
           <div class="section-heading">
